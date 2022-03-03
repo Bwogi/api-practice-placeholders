@@ -7,7 +7,7 @@ const getAllProducts = async () => {
   console.log(data);
 };
 getAllProducts();
-
+// --
 // get a single product
 const getSingleProducts = async () => {
   const res = await fetch('https://fakestoreapi.com/products/3');
@@ -15,7 +15,7 @@ const getSingleProducts = async () => {
   console.log(data);
 };
 getSingleProducts();
-
+// --
 // limit results to 50
 const limitProducts = async () => {
   const res = await fetch('https://fakestoreapi.com/products?limit=5');
@@ -23,7 +23,7 @@ const limitProducts = async () => {
   console.log(data);
 };
 limitProducts();
-
+// --
 // sort products in descending order
 const sortProducts = async () => {
   const res = await fetch(
@@ -33,7 +33,7 @@ const sortProducts = async () => {
   console.log(data);
 };
 sortProducts();
-
+// --
 // get all categories
 const getAllCategories = async () => {
   const res = await fetch('https://fakestoreapi.com/products/categories');
@@ -41,16 +41,34 @@ const getAllCategories = async () => {
   console.log(data);
 };
 getAllCategories();
-
+// --
+// get a specific category
+const getSpecificCategory = async () => {
+  const res = await fetch(
+    'https://fakestoreapi.com/products/category/jewelery'
+  );
+  const data = await res.json();
+  console.log(data);
+};
+getSpecificCategory();
+// --
 // create fake profile data api
 const fakeProfile = async () => {
   const res = await fetch('http://fakeapi.jsonparseronline.com/profile');
   const data = await res.json();
   console.log(data);
 };
-
 fakeProfile();
+// --
 
+// get all carts
+const getAllCarts = async () => {
+  const res = await fetch('https://fakestoreapi.com/carts');
+  const data = await res.json();
+  console.log(data);
+};
+getAllCarts();
+// --
 // placeholder users
 const placeholderUsers = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -59,7 +77,7 @@ const placeholderUsers = async () => {
 };
 
 placeholderUsers();
-
+// --
 // placeholder photos
 
 const placeholderPhotos = async () => {
@@ -68,7 +86,7 @@ const placeholderPhotos = async () => {
   console.log(data);
 };
 placeholderPhotos();
-
+// --
 // find placeholder posts
 const placeholderPosts = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -76,7 +94,7 @@ const placeholderPosts = async () => {
   console.log(data);
 };
 placeholderPosts();
-
+// --
 // find placeholder todos
 
 const placeholderTodos = async () => {
@@ -85,6 +103,7 @@ const placeholderTodos = async () => {
   console.log(data);
 };
 placeholderTodos();
+// --
 
 // find a random user
 // you have that api('https://randomuser.me/api') fetch that data and console log it.
@@ -105,3 +124,4 @@ const randomUser = async () => {
   console.log(data);
 };
 randomUser();
+// --
