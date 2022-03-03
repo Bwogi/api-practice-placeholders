@@ -1,7 +1,16 @@
+// employee data
+const getAllEmployees = async () => {
+  const res = await fetch('http://dummy.restapiexample.com/api/v1/employees');
+  const data = await res.json();
+  console.log(data);
+};
+
+getAllEmployees();
+
 // fake store API
 // update a product
 // using PUT
-
+/* 
 fetch('https://fakestoreapi.com/products/7', {
   method: 'PUT',
   body: JSON.stringify({
@@ -155,6 +164,8 @@ fetch('https://fakestoreapi.com/auth/login', {
 })
   .then((res) => res.json())
   .then((json) => console.log(json));
+
+*/
 
 // get all products
 
